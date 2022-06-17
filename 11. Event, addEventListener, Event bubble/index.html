@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event, addEventListener, Event bubble</title>
+</head>
+<body>
+    <!-- 24-1 What is Event, different types of event in web -->
+    <h1 onclick="alert('Masud tumi valo hoye jao')">Event niye Clickbaji</h1>
+    <button onclick="document.body.style.backgroundColor ='yellow'">Click Me</button> <!-- onclick 1st way -->
+    <button onclick="makeRed()">Click me: Red</button> <!-- onclick 2nd way -->
+    <button id="blue-button">Click me: Blue</button> <!-- onclick 3rd way -->
+
+    <!-- 24-3 Different ways to use addEventListener on a button -->
+    <button id="make-green-button">Click me: Green</button>
+    <button id="make-golden-btn">Click me: Golden Rod</button>
+    <button id="make-hotpink-btn">Click me: Hot Pink</button>
+    <button id="make-lightblue-btn">Click me: Light Blue</button>
+
+    <!-- 24-4 Most common ways to set Event Handlers -->
+    <p id="clk-methd"></p>
+    <button onclick="handleJustFunctionClick()">Just Function</button>
+    <button id="handle-event">direct add Event Listener</button>
+
+    <!-- addEventListener to input field -->
+    <p id="show-input-value"></p>
+    <input type="text" name="name" id="name-field">
+    <button id="update-name-btn">update</button>
+
+    <!-- 24-5 Create a comment box and display comment -->
+    <h2>Add your comment, Please!</h2>
+    <section>
+        <h4>Your comments</h2>
+        <div id="comment-list">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt atque nam explicabo itaque in minus architecto iure ipsa eum! Voluptatum inventore, labore rem debitis unde qui minus ea rerum.</p>
+            <p>Dolores voluptatum veritatis aliquam eveniet minus explicabo porro vel. Dignissimos eum commodi optio ut, sequi atque doloremque libero numquam repudiandae deserunt, nisi adipisci culpa autem fugit laudantium eos magnam dolores.</p>
+        </div>
+        <textarea name="" id="comment-area" cols="50" rows="5"></textarea><br>
+        <button id="post-btn">post</button>  
+    </section>
+
+    <!-- 24-6 Simple github like delete confirmation button -->
+    <h2>More Events</h2>
+    <section>
+        <h3 id="secret-info">Very Very important secret information</h3>
+        <input type="text" id="delete-confirm" placeholder="Please type delete">
+        <button id="delete-btn" disabled>Delete</button>
+    </section>
+
+    <!-- 24-7 (semi-advanced) Event bubble and Stop propagating -->
+    <section id="section-container">
+        <h4>Bubble vai list</h4>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum.</li>
+            <li id="second-item" class="item">Consequuntur, reprehenderit.</li>
+            <li class="item">Nisi, illo.</li>
+            <li class="item">Iure, magni.</li>
+            <li class="item">Perferendis, deleniti.</li>
+            <li class="item">Molestias, sit!</li>
+        </ul>
+    </section>
+
+    <!-- 24-8 (advanced) Event delegate and benefit of Event bubble -->
+    <h4>Event Delegate</h4>
+    <ul id="item2-container">
+        <li class="item2">Lorem, ipsum.</li>
+        <li class="item2">Consequuntur, reprehenderit.</li>
+        <li class="item2">Nisi, illo.</li>
+        <li class="item2">Iure, magni.</li>
+        <li class="item2">Perferendis, deleniti.</li>
+        <li class="item2">Molestias, sit!</li>
+    </ul>
+    <button id="add-item">Add Item</button>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
